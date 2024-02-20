@@ -5,7 +5,8 @@
   "description": "Cast any <canvas> element to an LED Matrix over WebSockets with an Arduino/ESP8266.",
   "main": "src/App.js",
   "scripts": {
-    "start": "parcel ./src/index.html",
+    "start": "node server.js",
+    "startindex": "parcel ./src/index.html",
     "build": "parcel build ./src/App.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,6 +24,10 @@
     "stream"
   ],
   "license": "gpl-3.0",
+  "dependencies": {
+    "serialport": "^12.0.0",
+    "ws": "^7.4.6"
+  },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.0.0-beta.2",
     "parcel": "^2.0.0-beta.2"
